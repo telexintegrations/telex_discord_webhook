@@ -57,7 +57,7 @@ This project integrates Telex with Discord by forwarding messages received from 
 Here is an example configuration for the Telex webhook:
 ```json
 {
-    "url": "https://telex-discord-integration.onrender.com/telex_webhook",
+    "url": "https://127.0.0.1:8000/telex_webhook",
     "method": "POST",
     "headers": {
         "Content-Type": "application/json"
@@ -67,6 +67,10 @@ Here is an example configuration for the Telex webhook:
     }
 }
 ```
+## Screenshots
+
+![image_1](./img/Screenshot_from_2025-02-20%20_11-10-53.png)
+![image_2](./img/Screenshot_from_2025-02-20_11-13-05.png)
 
 ## Project Structure
 
