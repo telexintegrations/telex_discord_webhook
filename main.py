@@ -64,7 +64,7 @@ def get_integration_json(request: Request):
             "descriptions": {
                 "app_name": "Telex to Discord",
                 "app_description": "Routes Telex messages to a Discord channel using Discord Webhooks.",
-                "app_logo": "https://baydre.github.io/discord-webhook-json/img/coming-soon.png",
+                "app_logo": f"{base_url}/img/coming-soon.png",
                 "app_url": base_url,
                 "background_color": "#fff",
             },
