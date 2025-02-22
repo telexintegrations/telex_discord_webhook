@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import httpx, os, json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Define Pydantic models
 class Setting(BaseModel):
@@ -22,8 +25,7 @@ app = FastAPI()
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://staging.telex.im", "https://telex.im",
-    "https://telex-discord-integration.onrender.com/telex_webhook"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],  
     allow_headers=["*"],
@@ -62,7 +64,7 @@ def get_integration_json(request: Request):
             "descriptions": {
                 "app_name": "Telex to Discord",
                 "app_description": "Routes Telex messages to a Discord channel using Discord Webhooks.",
-                "app_logo": "https://example.com/logo.png",
+                "app_logo": f"{base_url}/img/coming-soon.png",
                 "app_url": base_url,
                 "background_color": "#fff",
             },
