@@ -3,9 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import httpx, os, json
-from dotenv import load_dotenv
-
-load_dotenv()
 
 # Define Pydantic models
 class Setting(BaseModel):
