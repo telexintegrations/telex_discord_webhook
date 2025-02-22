@@ -38,6 +38,7 @@ async def send_to_discord(message: str):
     """Send a message to Discord webhook."""
     discord_payload = {"content": message}
     headers = {"Content-Type": "application/json"}
+    print(discord_payload)
     
     async with httpx.AsyncClient() as client:
         response = await client.post(DISCORD_WEBHOOK_URL, json=discord_payload, headers=headers)
@@ -60,7 +61,7 @@ def get_integration_json(request: Request):
     base_url = str(request.base_url).rstrip("/")
     integration_json = {
         "data": {
-            "date": {"created_at": "2025-02-19", "updated_at": "2025-02-20"},
+            "date": {"created_at": "2025-02-19", "updated_at": "2025-02-22"},
             "descriptions": {
                 "app_name": "Telex to Discord",
                 "app_description": "Routes Telex messages to a Discord channel using Discord Webhooks.",
