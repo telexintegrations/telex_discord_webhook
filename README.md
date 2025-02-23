@@ -74,11 +74,26 @@ Here is an example configuration for the Telex webhook:
 
 ## Project Structure
 
-    telex_discord_integrations/
-    ├── main.py          # Main application file
-    ├── .env             # Environment variables file (not included in version control)
-    ├── requirements.txt # Project dependencies
-    └── README.md        # Project documentation
+    telex_discord_webhook/
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── models.py
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── endpoints.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── discord.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_main.py
+├── .env
+├── requirements.txt
+├── README.md
 
 ## License
 
